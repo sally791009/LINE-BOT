@@ -1,2 +1,2 @@
 # LINE-Bot
-# line-bot
+rule-based bot
