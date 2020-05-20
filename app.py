@@ -49,10 +49,14 @@ def handle_message(event):
     elif '訂位' in msg: #如果訊息裡提到訂位
         r = '你需要訂位，對嗎？'
     elif msg in ['謝謝', '謝謝妳', '謝謝你', '感謝', '謝啦']:
-        r = StickerSendMessage(
-    package_id='11537',
-    sticker_id='52002736'
-)
+        sticker_message = StickerSendMessage(
+        package_id='11537',
+        sticker_id='52002736'
+        )
+
+        line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message)
 
     line_bot_api.reply_message(
         event.reply_token,
